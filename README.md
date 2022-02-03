@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+<h1 align="center">Welcome to get-a-room 🏨</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://twitter.com/ooanishoo" target="_blank">
+    <img alt="Twitter: ooanishoo" src="https://img.shields.io/twitter/follow/ooanishoo.svg?style=social" />
+  </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A simple frontend UI to book rooms built using garden component, react, typescript with TDD
 
-## Available Scripts
+# Functional Requirements
+- Up to eight rooms can be added
+- Each room has at least one adult and up to a maximum of five
+- Each room has zero or more children up to a maximum of three
+- Each child needs to have their age supplied, so we know what kind of bed or cot to provide and what to charge for the room
+- Each room has a maximum occupancy of five. This is, adults plus children per room
+- The Guest and Room selector should always yield a valid room occupancy, use button disablement to avoid invalid configurations
+- A user can either click Search to commit the output to the URL or click the x on top to reset the chosen room selection and revert the UI back to the original state.
 
-In the project directory, you can run:
+## Input rules
+The component should be able to pass a string as the default data. These are the rules:
 
-### `yarn start`
+- Rooms are separated by pipe |
+- Adults and children are separated by a colon :
+- Children ages are separated by a comma ,
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Examples:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- "1:4,6|3" → Two rooms, one with one adult and two children ages four and six and the other with three adults and no children
+- "3" → One room with three adults and no children
+- "2:4" → One room with two adults and one child aged four
+- "1:0,13,16" → One room with one adult and three children (aged zero, thirteen, and sixteen)
 
-### `yarn test`
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+# Getting started
+## Install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+yarn install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+yarn run start
+```
 
-### `yarn eject`
+## Run tests
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+yarn test
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Author
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+👤 **Anish**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* Website: https://anish-tech.carrd.co/
+* Twitter: [@ooanishoo](https://twitter.com/ooanishoo)
+* Github: [@ooanishoo](https://github.com/ooanishoo)
+* LinkedIn: [@ooanishoo](https://linkedin.com/in/ooanishoo)
 
-## Learn More
+## Show your support
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Give a ⭐️ if this project helped you!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
